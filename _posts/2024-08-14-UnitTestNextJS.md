@@ -89,7 +89,7 @@ search: true
 ## Making Unit-Test
 이해를 돕기 위해 회원가입 페이지에 렌더링 되는 회원가입 폼 컴포넌트를 예로 들어 설명하겠다.  
 회원가입 페이지는 아래와 같다.  
-<img src="../../images/2024-08-14/RegisterForm.png" alt="RegisterForm" style="zoom:50%;" />
+<img src="../../images/2024-08-14-UnitTestFE/RegisterForm.png" alt="RegisterForm" style="zoom:50%;" />
 
 회원가입 폼은 다음과 같이 구성되어있다.
 - 이름, 이메일, 비밀번호, 비밀번호 확인, 주소, 전화번호를 입력할 수 있는 입력 필드 (Input Field)
@@ -262,9 +262,9 @@ expect(dispatchedAction).toEqual(
 
 다음 두가지 그림을 보자.
 
-<img src="../../images/2024-08-14/input_normal.png" alt="input_normal" style="zoom:50%;" />
+<img src="../../images/2024-08-14-UnitTestFE/input_normal.png" alt="input_normal" style="zoom:50%;" />
 
-<img src="../../images/2024-08-14/input_error.png" alt="input_error" style="zoom:50%;" />
+<img src="../../images/2024-08-14-UnitTestFE/input_error.png" alt="input_error" style="zoom:50%;" />
 
 첫번째 그림은 아무일도 일어나지 않는 필드이다. 이 필드는 `aria-invalid`라는 속성을 갖고 있고, 이 속성은 기본적으로 `false` 값을 갖고 있다. 하지만 두번째 사진처럼 이 필드가 입력이 되지 않은 상태에서 버튼이 눌려져 경고 메시지가 뜨게 되면 이 `aria-invalid` 값이 `true`가 된 것을 알수 있다.  
 
