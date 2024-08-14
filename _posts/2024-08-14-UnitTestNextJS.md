@@ -135,21 +135,21 @@ import createSagaMiddleware from 'redux-saga';
 #### configure reducer, store and saga for testing
 패키지 import 가 끝나면 리듀서와 스토어 그리고 사가 설정을 한다. 이것을 하는 이유는 테스팅하는 컴포넌트가 리덕스 스토어를 사용해서 설정을 하는것이다. 만약 리덕스를 사용하지 않는다면 이 설정은 할 필요가 없다.  
 
-    ```typescript
-    const sagaMiddleware = createSagaMiddleware();
-    const mockStore = configureStore([sagaMiddleware]);
-    const store = mockStore({
-    reducer: rootReducer,
-    });
-    const mockDispatch = jest.fn();
+```typescript
+const sagaMiddleware = createSagaMiddleware();
+const mockStore = configureStore([sagaMiddleware]);
+const store = mockStore({
+reducer: rootReducer,
+});
+const mockDispatch = jest.fn();
 
-    jest.mock('react-redux', () => ({
-    ...jest.requireActual('react-redux'),
-    useDispatch: () => mockDispatch,
-    }));
+jest.mock('react-redux', () => ({
+...jest.requireActual('react-redux'),
+useDispatch: () => mockDispatch,
+}));
 
-    sagaMiddleware.run(rootSaga);
-    ```
+sagaMiddleware.run(rootSaga);
+```
 
 `sagaMiddleware`와 `rootSaga` 그리고 `rootReducer`들은 `mocking` 하지 않는다. 우리는 스토어와 디스패치만 `mocking` 해주면 된다. 먼저 `configureStore` 함수로 비어있는 목(mock) 스토어를 만들어주고, 그 안에 `rootReducer`를 포함시켜 목 스토어안에 우리가 사용하게될 리듀서를 넣어준다.  
 중요한건 `Dispatch` 를 모킹 (mocking)하는것이다. 우리는 컴포넌트에서 디스패치를 사용할 때 다음과 같이 디스패치 함수를 상수 (`const`)로 정의하고 사용한다.
