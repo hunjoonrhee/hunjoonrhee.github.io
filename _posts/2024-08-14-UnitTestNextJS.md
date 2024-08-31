@@ -262,9 +262,9 @@ expect(dispatchedAction).toEqual(
 
 다음 두가지 그림을 보자.
 
-<img src="../../images/2024-08-14-UnitTestFE/input_normal.png" alt="input_normal" style="zoom:50%;" />
+<img src="../images/2024-08-14-UnitTestFE/input_normal.png" alt="input_normal" style="zoom:50%;" />
 
-<img src="../../images/2024-08-14-UnitTestFE/input_error.png" alt="input_error" style="zoom:50%;" />
+<img src="../images/2024-08-14-UnitTestFE/input_error.png" alt="input_error" style="zoom:50%;" />
 
 첫번째 그림은 아무일도 일어나지 않는 필드이다. 이 필드는 `aria-invalid`라는 속성을 갖고 있고, 이 속성은 기본적으로 `false` 값을 갖고 있다. 하지만 두번째 사진처럼 이 필드가 입력이 되지 않은 상태에서 버튼이 눌려져 경고 메시지가 뜨게 되면 이 `aria-invalid` 값이 `true`가 된 것을 알수 있다.  
 
