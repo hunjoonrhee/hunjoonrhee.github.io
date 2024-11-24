@@ -11,7 +11,7 @@ search: true
 
 **Tree 형식**은 굳이 브라우저가 아니라도 볼 수 있다. 지금 이 글을 쓰고 있는 VS CODE에서도 이 구조를 확인 할 수 있다.
 
-<img src="../../images/2024-11-23-RecursiveQuery/tree-structure.png" alt="tree-structure" style="zoom:50%;" />
+<img src="../../../images/2024-11-23-RecursiveQuery/tree-structure.png" alt="tree-structure" style="zoom:50%;" />
 
 그리고 이 구조를 자주 볼 수 있는 웹사이트를 하나만 꼽으라면 온라인 서점일 것이다. 온라인 서점의 책들은 카테고리 별로 정리되어있고 사용자는 카테고리 목록을 열어 원하는 카테고리를 선택해서 해당 카테고리의 책들을 조회할 수 있다. 이것은 어쩌면 온라인 서점의 가장 기본적인 기능이라고도 할 수 있겠다.
 
