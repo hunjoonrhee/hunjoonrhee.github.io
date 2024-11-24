@@ -15,18 +15,18 @@ search: true
 
 그리고 이 구조를 자주 볼 수 있는 웹사이트를 하나만 꼽으라면 온라인 서점일 것이다. 온라인 서점의 책들은 카테고리 별로 정리되어있고 사용자는 카테고리 목록을 열어 원하는 카테고리를 선택해서 해당 카테고리의 책들을 조회할 수 있다. 이것은 어쩌면 온라인 서점의 가장 기본적인 기능이라고도 할 수 있겠다.
 
-<img src="../../images/2024-11-23-RecursiveQuery/aladin-category.png" alt="aladin-category" style="zoom:50%;" />
+<img src="../../../images/2024-11-23-RecursiveQuery/aladin-category.png" alt="aladin-category" style="zoom:50%;" />
 
 나도 현재 온라인 서점을 사이드 프로젝트로 만들고 있는데, 이제 이 **"카테고리 조회"** 기능을 만들어야 한다. 오늘은 이 기능을 구현하기 위한 가장 첫번째 단계인 *데이터 처리* 에 대해서 다뤄보려고 한다.
 
 # User Story
 간단하게 이 기능의 User Story 에 대해서 설명하겠다. 웹사이트에 하나의 버튼이 있고, 그 버튼을 눌렀을 때 카테고리 목록이 그리드 형식을 가진 팝업 창이 뜬다. 간단하게 다음과 같다.
 
-<img src="../../images/2024-11-23-RecursiveQuery/category-popup.png" alt="category-popup" style="zoom:50%;" />
+<img src="../../../images/2024-11-23-RecursiveQuery/category-popup.png" alt="category-popup" style="zoom:50%;" />
 
 그림에서 보면 알 수 있듯이 카테고리 창에는 제일 최상위 카테고리는 나오지 않고, 두번째 레벨과 세번째 카테고리 (그림에서는 *1 Depth, 2 Depth*)의 카테고리 부터 나오게 된다. 이 팝업창을 완성하기 위해서 우리는 데이터 베이스에 있는 카테고리 테이블의 데이터 중 레벨 2와 레벨 3의 카테고리만 추출을 해내야 한다. 하지만 카테고리 테이블은 다음과 같이 생겼고, 레벨을 나타내는 column도 없다.
 
-<img src="images/2024-11-23-RecursiveQuery/categories-table.png" alt="categories-table" style="zoom:50%;" />
+<img src="../../../images/2024-11-23-RecursiveQuery/categories-table.png" alt="categories-table" style="zoom:50%;" />
 
 그렇다고 저 테이블에 있는 구조대로 데이터를 불러와서 프론트엔드에서 처리를 하기에는 프론트엔드에 부하가 많이 걸릴 것이다. 따라서 이런 경우에는 데이터 처리를 백엔드에서 해주고, 백엔드는 프론트엔드가 필요한 데이터만 보내주는게 성능적으로 좋다.
 
