@@ -26,7 +26,7 @@ search: true
 
 그림에서 보면 알 수 있듯이 카테고리 창에는 제일 최상위 카테고리는 나오지 않고, 두번째 레벨과 세번째 카테고리 (그림에서는 *1 Depth, 2 Depth*)의 카테고리 부터 나오게 된다. 이 팝업창을 완성하기 위해서 우리는 데이터 베이스에 있는 카테고리 테이블의 데이터 중 레벨 2와 레벨 3의 카테고리만 추출을 해내야 한다. 하지만 카테고리 테이블은 다음과 같이 생겼고, 레벨을 나타내는 column도 없다.
 
-<img src="../../images/2024-11-23-RecursiveQuery/categories-table.png" alt="categories-table" style="zoom:50%;" />
+<img src="../images/2024-11-23-RecursiveQuery/categories-table.png" alt="categories-table" style="zoom:50%;" />
 
 그렇다고 저 테이블에 있는 구조대로 데이터를 불러와서 프론트엔드에서 처리를 하기에는 프론트엔드에 부하가 많이 걸릴 것이다. 따라서 이런 경우에는 데이터 처리를 백엔드에서 해주고, 백엔드는 프론트엔드가 필요한 데이터만 보내주는게 성능적으로 좋다.
 
