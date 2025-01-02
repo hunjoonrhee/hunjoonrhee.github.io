@@ -80,7 +80,7 @@ FROM categories_hierarchy
 ## Map을 사용한 자식 카테고리 데이터 추출 및 저장
 상위 부모 카테고리를 추출한 후에는 각 부모 카테고리의 자식 데이터를 가져와야 한다. 이를 통해 완전한 계층 구조를 구성할 수 있다. 아래의 이미지가 그것을 구현한 코드인데, 재귀 쿼리로 가져온 계층적 데이터를 처리하고, 각 카테고리의 자식 데이터를 `Map` 객체에 저장하는 과정을 설명한다. 이 과정은 React 컴포넌트에서 데이터를 효율적으로 관리하고 렌더링하는데 중요한 역할을 한다.
 
-<img src="../../../images/2025-01-02-RecursiveQuery2/result-in-map.png" alt="result-in-map" style="zoom:50%;" />
+<img src="../../../../images/2025-01-02-RecursiveQuery2/result-in-map.png" alt="result-in-map" style="zoom:50%;" />
 
 ### 1. 재귀 쿼리의 결과 처리
 ```javascript
