@@ -28,7 +28,7 @@ search: true
 
 이 과정을 단순 쿼리로 처리하면 비효율적이고, 상호 참조를 관리하기 어렵다. 이를 해결하기 위해 재귀 쿼리를 사용한다. 재귀 쿼리를 활용하면 계층적 관계를 반복적으로 탐색하여 상위 부모와 자식 데이터를 동시에 추출할 수 있다. 아래의 그림은 재귀 쿼리의 상세 동작을 설명한다.
 
-<img src="../../../images/2025-01-02-RecursiveQuery2/RecursiveQuery.png" alt="/RecursiveQuery" style="zoom:50%;" />
+<img src="../../../../images/2025-01-02-RecursiveQuery2/RecursiveQuery.png" alt="RecursiveQuery" style="zoom:50%;" />
 
 ### 1. 첫 번째 단계: 기본 CTE 구성
 ```sql
@@ -72,7 +72,7 @@ FROM categories_hierarchy
 - 재귀적으로 탐색된 모든 카테고리 데이터를 반환한다.
 - 결과에는 입력된 카테고리 (id = :id)와 그 상위 부모 카테고리가 포함된다.
 
-<img src="../../../images/2025-01-02-RecursiveQuery2/result-recursive-query.png" alt="result-recursive-query" style="zoom:50%;" />
+<img src="../../../../images/2025-01-02-RecursiveQuery2/result-recursive-query.png" alt="result-recursive-query" style="zoom:50%;" />
 
 ### 재귀 쿼리의 필요성
 재귀 쿼리는 단순히 카테고리 데이터를 가져오는 것이 아니라, 상위 부모와 자식 간의 관계를 탐색하는 데 초점을 맞춘다. 이로 인해 상위-하위 관계를 하나의 쿼리로 효과적으로 처리할 수 있다. 만약 이러한 쿼리가 없었다면, 여러 단계의 데이터 요청이 필요했을 것이고, 이는 성능과 코드 복잡도 측면에서 큰 단점이 되었을 것이다.
