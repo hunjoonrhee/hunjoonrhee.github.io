@@ -151,7 +151,6 @@ const renderCategory = (category, paddingLeft = 0) => {
         expandedIds={expandedIds}
         onExpandCategory={onExpandCategory}
         handleOnClickCategory={handleOnClickCategory}
-        style={{ padding: `0 0 0 ${paddingLeft}rem` }}
       />
       {expandedIds.includes(category.id.toString()) &&
         categories[category.id]?.map((subCategory) =>
