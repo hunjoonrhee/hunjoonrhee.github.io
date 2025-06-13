@@ -88,7 +88,7 @@ this.carModelControl.valueChanges.subscribe(index => {
 ```
 ---
 
-## 요약: 자주 틀리는 5가지 실전 포인트
+## 요약: 자주 틀리는 3가지 실전 포인트
 
 | 문제 | 원인 | 해결 |
 |------|------|------|
