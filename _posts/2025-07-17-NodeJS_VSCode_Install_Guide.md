@@ -17,7 +17,7 @@ search: true
 ## 1. Node.js 설치 방법
 
 ### ✅ Windows에서 Node.js 설치하기
-1. 공식 사이트 접속: https://nodejs.org  
+1. 공식 사이트 접속: [https://nodejs.org](https://nodejs.org)
 2. LTS 버전 다운로드 - 초록색 **"LTS"** 버튼 클릭 (예: `node-v20.x.x-lts.msi`)  
 3. 설치 마법사 실행 - `Next` → `동의` → `Install` → `Finish`  
 4. 명령 프롬프트에서 확인:  
@@ -84,7 +84,7 @@ search: true
 
 ## 3. VSCode 설치 방법
 
-1. 사이트 접속: https://code.visualstudio.com/  
+1. 사이트 접속: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 2. 다운로드 후 설치 및 실행
 
 ### 추천 VSCode 확장 프로그램
