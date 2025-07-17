@@ -6,9 +6,6 @@ tags: [Install, Set-Up]
 search: true
 ---
 
-
-# Node.js, npm, VSCode 설치 가이드 (Windows & macOS)
-
 이 강의를 따라오기 위해 필요한 개발 환경 설치 방법을 안내드립니다.  
 운영체제에 따라 분리하여 설명하며, 특히 macOS는 Homebrew와 nvm을 통한 LTS 버전 설치 방법도 포함되어 있습니다.
 
